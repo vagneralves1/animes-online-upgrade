@@ -11,23 +11,40 @@
 <body>
     <main>
         <nav id="menu-cabeçalho">
-            <ul>
-                <li id="menu"><a href="#"><i class="bi bi-list"></i></a></li>
+            <ul id="menu-responcivo">
+                <li onclick="clicou_menu()" id="menu"><a href="#"><i class="bi bi-list"></i></a></li>
+                <ul id="topicos">
+                    <li><a href="#">Inicio</a></li>
+                    <hr class="linha">
+                    <li>
+                        <a href="#">Lista de Animes</a>
+                        <ul id="menu-list">
+                            <li id="legendado"><a href="#">Legendado</a></li>
+                            <li><a href="#">Dublado</a></li>
+                        </ul>
+                    </li>
+                    <hr class="linha">
+                    <li><a href="#">Episodios</a></li>
+                    <hr class="linha">
+                    <li><a href="#">Gêneros</a></li>
+                </ul>
+            </ul>
+        </nav>
+        <nav id="menu-exposto">
+           <ul id="menu-aberto">
                 <li><a href="#">Inicio</a></li>
-                <hr class="linha">
-                <li>
-                    <a href="#">Lista de Animes</a>
-                    <ul id="menu-list">
-                        <li id="legendado"><a href="#">Legendado</a></li>
+                <li id="menu-lista">
+                    <a href="#">Lista Animes</a>
+                    <ul>
+                        <li><a href="#">Legendado</a></li>
                         <li><a href="#">Dublado</a></li>
                     </ul>
                 </li>
-                <hr class="linha">
                 <li><a href="#">Episodios</a></li>
-                <hr class="linha">
-                <li><a href="#">Gêneros</a></li>
+                <li><a href="#">Gênero</a></li>
             </ul>
         </nav>
     </main>
 </body>
+    <script src="java_animes-online.js"></script>
 </html>

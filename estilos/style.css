@@ -10,8 +10,16 @@ body{
 }
 
 main > nav#menu-cabeçalho  ul{
+    display: inline;
     list-style-type: none;
     background-color: black;
+}
+
+nav#menu-cabeçalho ul#topicos{
+    display: block;
+    background-color: black;
+    position: fixed;
+    width: 100%;
 }
 
 nav#menu-cabeçalho li > a{
@@ -25,7 +33,7 @@ nav#menu-cabeçalho li > a:hover{
     color: rgb(231, 15, 15);
 }
 
-nav#menu-cabeçalho > ul > li > a{
+nav#menu-cabeçalho > ul > ul#topicos > li > a{
     display: block;
     padding: 15px;
 }
@@ -43,6 +51,71 @@ nav#menu-cabeçalho ul#menu-list > li{
 }
 
 nav#menu-cabeçalho #menu i{
+    display: block;
     font-size: 2em;
+    background-color: black;
+    width: 50px;
+    text-align: center;
 }
 
+nav#menu-cabeçalho > ul  #topicos{
+    display: none;
+}
+
+nav#menu-exposto{
+    display: none;
+}
+
+nav > #menu-aberto{
+    background-color: black;
+    height: 60px;
+    display: flex;
+}
+
+nav > #menu-aberto{
+    list-style-type: none;
+}
+
+nav > #menu-aberto > li > a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+
+}
+
+nav > #menu-aberto > li:hover{
+    background-color: rgb(62, 62, 62);
+}
+
+nav  #menu-lista  li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding-left: 10px;
+}
+
+nav  #menu-lista  li{
+    display: none;
+    background-color: black;
+    list-style-type: none;
+    padding-top: 10px;
+    padding-bottom: 8px;
+}
+
+nav  #menu-lista  li:hover{
+    background-color: rgb(37, 37, 37);
+}
+
+nav  #menu-lista:hover > ul > li{
+    display: block;
+}
+
+@media(min-width: 480px){
+    nav#menu-exposto{
+        display: block;
+    }
+    nav#menu-cabeçalho{
+        display: none;
+    }
+}

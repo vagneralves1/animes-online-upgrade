@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: rgb(168, 168, 168);
+}
+
+main > nav#menu-cabeçalho  ul{
+    list-style-type: none;
+    background-color: black;
+}
+
+nav#menu-cabeçalho li > a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    color: white;
+}
+
+nav#menu-cabeçalho li > a:hover{
+    color: rgb(231, 15, 15);
+}
+
+nav#menu-cabeçalho > ul > li > a{
+    display: block;
+    padding: 15px;
+}
+
+nav#menu-cabeçalho ul#menu-list{
+    max-width: 400px;
+    text-align: center;
+}
+
+nav#menu-cabeçalho ul#menu-list > li{
+    display: inline-block;
+    max-width: 120px;
+    min-width: 190px;
+    padding-bottom: 15px;
+}
+
+nav#menu-cabeçalho #menu i{
+    font-size: 2em;
+}
+

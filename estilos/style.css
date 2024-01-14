@@ -9,113 +9,128 @@ body{
     background-color: rgb(168, 168, 168);
 }
 
-main > nav#menu-cabeçalho  ul{
-    display: inline;
-    list-style-type: none;
+main{
     background-color: black;
-}
-
-nav#menu-cabeçalho ul#topicos{
-    display: block;
-    background-color: black;
-    position: fixed;
-    width: 100%;
-}
-
-nav#menu-cabeçalho li > a{
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.1em;
-    color: white;
-}
-
-nav#menu-cabeçalho li > a:hover{
-    color: rgb(231, 15, 15);
-}
-
-nav#menu-cabeçalho > ul > ul#topicos > li > a{
-    display: block;
-    padding: 15px;
-}
-
-nav#menu-cabeçalho ul#menu-list{
-    max-width: 400px;
-    text-align: center;
-}
-
-nav#menu-cabeçalho ul#menu-list > li{
-    display: inline-block;
-    max-width: 120px;
-    min-width: 190px;
-    padding-bottom: 15px;
-}
-
-nav#menu-cabeçalho #menu i{
-    display: block;
-    font-size: 2em;
-    background-color: black;
-    width: 50px;
-    text-align: center;
-}
-
-nav#menu-cabeçalho > ul  #topicos{
-    display: none;
-}
-
-nav#menu-exposto{
-    display: none;
-}
-
-nav > #menu-aberto{
-    background-color: black;
-    height: 60px;
     display: flex;
 }
 
-nav > #menu-aberto{
-    list-style-type: none;
-}
-
-nav > #menu-aberto > li > a{
-    display: block;
-    text-decoration: none;
+main > header{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    text-align: center;
+    background-color: black;
     color: white;
-    padding: 20px;
-
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    margin: auto;
 }
 
-nav > #menu-aberto > li:hover{
-    background-color: rgb(62, 62, 62);
+main > nav#menu{
+    background-color: black;
 }
 
-nav  #menu-lista  li a{
-    display: block;
-    text-decoration: none;
-    color: white;
-    padding-left: 10px;
-}
-
-nav  #menu-lista  li{
-    display: none;
+div#menu-aberto  > ul{
+    display: flex; 
     background-color: black;
     list-style-type: none;
-    padding-top: 10px;
-    padding-bottom: 8px;
+    text-decoration: center;
+    height: 50px;
+
+    position: absolute;
 }
 
-nav  #menu-lista  li:hover{
-    background-color: rgb(37, 37, 37);
+div#menu-aberto > ul > li{
+    text-align: center;
+
+    width: 110px;
 }
 
-nav  #menu-lista:hover > ul > li{
+div#menu-aberto .topico{
+    display: block;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    background-color: rgb(3, 3, 3);
+    color: rgb(212, 209, 209);
+    padding: 15px;
+    cursor: pointer;
+}
+
+div#menu-aberto .topico:hover{
+    background-color: rgb(35, 35, 35);
+    color: rgb(238, 238, 238);
+}
+
+div#menu-aberto li#lista-a{
+    width: 140px;
+}
+
+div#menu-aberto li#lista-a > ul{
+    display: none;
+    list-style-type: none;
+}
+
+div#menu-aberto li#lista-a:hover > ul{
     display: block;
 }
 
-@media(min-width: 480px){
-    nav#menu-exposto{
-        display: block;
-    }
-    nav#menu-cabeçalho{
+div#menu-icon{
+    display: none;
+}
+
+div#menu-icon > div {
+    display: inline;
+}
+
+div#menu-icon i{
+    display: block;
+    color: white;
+    font-size: 2.2em;
+    width: 60px;
+    text-align: center;
+    background-color: rgb(4, 4, 4);
+}
+
+div#menu-icon > div > ul{
+    background-color: black;
+    
+    display: none;
+}
+
+div#menu-icon li{
+    padding: 10px;
+    padding-left: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+}
+
+div#menu-icon a:hover{
+    color: red;
+}
+
+div#menu-icon li#lista-an > ul{
+    display: flex;
+    list-style-type: none;
+    padding-top: 15px;
+    text-align: center;
+}
+
+div#menu-icon li#lista-an > ul > li#dub{
+    text-align: center;
+    width: 220px;
+}
+
+div#menu-icon a{
+    text-decoration: none;
+    color: white;
+}
+
+@media(max-width: 480px){
+    div#menu-aberto{
         display: none;
+    }
+    div#menu-icon{
+        display: block;
     }
 }

@@ -1,4 +1,4 @@
-var menu = document.getElementById('topicos')
+var menu = document.getElementById('menu_oculto')
 var check = 0
 
 function clicou_menu(){

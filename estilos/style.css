@@ -12,22 +12,40 @@ body{
 main{
     background-color: black;
     display: flex;
+
+    max-width: 100%;
 }
 
-main > header{
+main > header > h1{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1em;
+    font-size: 1.2em;
     text-align: center;
+
     background-color: black;
     color: white;
-    width: 250px;
+
+    width: 150px;
     height: 50px;
     line-height: 50px;
     margin: auto;
+
+    transition-duration: 1s;
 }
 
 main > nav#menu{
     background-color: black;
+    transition-duration: 1s;
+}
+
+@media(min-width: 1000px){
+    main > header > h1{
+        transition-duration: 1s;
+        width: 300px;
+    }
+    main > nav{
+        transition-duration: 1s;
+        padding-left: 200px;
+    }
 }
 
 div#menu-aberto  > ul{
@@ -37,13 +55,14 @@ div#menu-aberto  > ul{
     text-decoration: center;
     height: 50px;
 
+    text-align: right;
     position: absolute;
 }
 
 div#menu-aberto > ul > li{
     text-align: center;
 
-    width: 110px;
+    width: 90px;
 }
 
 div#menu-aberto .topico{
@@ -77,6 +96,8 @@ div#menu-aberto li#lista-a:hover > ul{
 
 div#menu-icon{
     display: none;
+    position: absolute;
+    width: 100%;
 }
 
 div#menu-icon > div {
@@ -126,11 +147,29 @@ div#menu-icon a{
     color: white;
 }
 
-@media(max-width: 480px){
+@media(max-width: 570px){
     div#menu-aberto{
         display: none;
     }
     div#menu-icon{
         display: block;
+        grid-area: icon-menu;
+    }
+
+    div#menu-icon > div > i{
+        height: 45px;
+        background-color: rgb(34, 34, 34);
+        padding-top: 5px;
+    }
+
+    main > header{
+        grid-area: titulo;
+    }
+
+    main{
+        display: grid;
+        grid-template-areas: 
+        "icon-menu titulo"
+        ;
     }
 }

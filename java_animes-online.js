@@ -1,5 +1,6 @@
 var menu = document.getElementById('menu_oculto')
-var check = 0
+var icon = document.getElementsByClassName('icon-s')
+var check = 0                               
 
 function clicou_menu(){
     if (check == 0){

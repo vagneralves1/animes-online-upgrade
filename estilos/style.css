@@ -7,6 +7,7 @@
 
 body{
     background-color: rgb(168, 168, 168);
+    overflow-x: hidden;
 }
 
 main{
@@ -48,6 +49,28 @@ main > nav#menu{
     }
 }
 
+@media(min-width: 1170px){
+    main > header > h1{
+        transition-duration: 1s;
+        width: 320px;
+    }
+    main > nav{
+        transition-duration: 1s;
+        padding-left: 400px;
+    }
+}
+
+@media(min-width: 1366px){
+    main > header > h1{
+        transition-duration: 1s;
+        width: 390px;
+    }
+    main > nav{
+        transition-duration: 1s;
+        padding-left: 560px;
+    }
+}
+
 div#menu-aberto  > ul{
     display: flex; 
     background-color: black;
@@ -61,6 +84,7 @@ div#menu-aberto  > ul{
 
 div#menu-aberto > ul > li{
     text-align: center;
+    cursor: pointer;
 
     width: 90px;
 }
@@ -104,13 +128,14 @@ div#menu-icon > div {
     display: inline;
 }
 
-div#menu-icon i{
+div#menu-icon img#icon{
     display: block;
-    color: white;
     font-size: 2.2em;
     width: 60px;
     text-align: center;
     background-color: rgb(4, 4, 4);
+
+    cursor: pointer;
 }
 
 div#menu-icon > div > ul{
@@ -126,8 +151,8 @@ div#menu-icon li{
     font-size: 0.9em;
 }
 
-div#menu-icon a:hover{
-    color: red;
+div#menu-icon li:hover > a{
+    color: rgb(201, 14, 14);
 }
 
 div#menu-icon li#lista-an > ul{
@@ -156,7 +181,7 @@ div#menu-icon a{
         grid-area: icon-menu;
     }
 
-    div#menu-icon > div > i{
+    div#menu-icon > div > img#icon{
         height: 45px;
         background-color: rgb(9, 9, 9);
         padding-top: 5px;
@@ -172,4 +197,46 @@ div#menu-icon a{
         "icon-menu titulo"
         ;
     }
+}
+
+/*--------------------------------Alfabeto      */
+
+main#conteudo{
+    padding-top: 10px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+div#alfabeto > h2{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    padding-left: 10px;
+}
+
+div#alfabeto > div ul{
+    display: flex;
+    background-color: rgb(44, 44, 44);
+    list-style-type: none;
+}
+
+div#alfabeto-caixa{
+    overflow-x: hidden;
+    max-width: 1200px;
+    width: 100%;
+}
+
+div#alfabeto-caixa > ul{
+    overflow-x: scroll;
+    width: 100vi;
+}
+
+div#alfabeto-caixa li.caixa-letra{
+    padding: 15px;
+}
+
+div#alfabeto-caixa li.caixa-letra a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(175, 172, 172);
 }

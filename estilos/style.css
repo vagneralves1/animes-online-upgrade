@@ -149,10 +149,12 @@ div#menu-icon li{
     padding-left: 22px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.9em;
+
+    transition-duration: 0.3s;
 }
 
 div#menu-icon li:hover > a{
-    color: rgb(201, 14, 14);
+    color: rgb(209, 24, 24);
 }
 
 div#menu-icon li#lista-an > ul{
@@ -212,6 +214,7 @@ div#alfabeto > h2{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
     padding-left: 10px;
+    padding-bottom: 10px;
 }
 
 div#alfabeto > div ul{
@@ -227,12 +230,24 @@ div#alfabeto-caixa{
 }
 
 div#alfabeto-caixa > ul{
-    overflow-x: scroll;
+    overflow-x: auto;
     width: 100vi;
 }
 
+::-webkit-scrollbar{
+    background-color: rgb(38, 37, 37);
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(94, 93, 93);
+    border-radius: 5px;
+}
+
 div#alfabeto-caixa li.caixa-letra{
-    padding: 15px;
+    padding: 13px;
+    padding-left: 19px;
+    transition-duration: 0.3s;
 }
 
 div#alfabeto-caixa li.caixa-letra a{
@@ -240,3 +255,32 @@ div#alfabeto-caixa li.caixa-letra a{
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(175, 172, 172);
 }
+
+div#alfabeto-caixa li.caixa-letra:hover > a{
+    color: rgb(210, 35, 35);
+}
+
+/*------------------------------Conteúdo      */
+
+aside{
+    max-width: 1200px;
+    margin: auto;
+}
+
+aside > .topico-conteudo{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.topico-conteudo > .titulo-conteudo{
+    color: white;
+    padding: 10px;
+}
+
+.topico-conteudo > .ver-mais{
+    background-color: red;
+    color: white;
+    border: none;
+    
+    font-size: 0.8em;
+ }

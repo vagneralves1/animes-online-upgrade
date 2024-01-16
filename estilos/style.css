@@ -264,6 +264,8 @@ div#alfabeto-caixa li.caixa-letra:hover > a{
 aside{
     max-width: 1200px;
     margin: auto;
+
+    background-color: black;
 }
 
 aside > .topico-conteudo{
@@ -307,14 +309,36 @@ aside > .topico-conteudo{
     color: rgb(255, 255, 255);
  }
 
-animes-caixa{
-    display: flex;
+/*-------------------------------------Capas dos Animes*/
+
+.animes-caixa{
+    overflow-x: auto;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 
- .img-capa{
-    min-width: 70px;
-    max-width: 200px; 
-    height: 100px;
-    background-size: 100%;
-    background-repeat: no-repeat;
+.animes-caixa::-webkit-scrollbar{
+    background-color: rgb(20, 19, 19);
+    height: 5px;
+}
+
+.animes-caixa::-webkit-scrollbar-thumb{
+    background-color: rgb(55, 54, 54);
+    border-radius: 5px;
+}
+
+.animes-caixa > .animes-capa{
+    background-color: rgb(8, 8, 8);
+    display: flex;
+    width: 1200px;
+}
+
+.animes-capa > .img-capa{
+    grid-area: "img-capa";
+}
+
+.img-capa > a > img{
+    width: 95%;
+    height: 180px;
+    border-radius: 8px;
 }

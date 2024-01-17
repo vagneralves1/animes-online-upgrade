@@ -2,24 +2,26 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
 }
 
 body{
-    background-color: rgb(168, 168, 168);
+    background-color: #1b1b1c;
     overflow-x: hidden;
 }
 
-main{
+main#topo{
     background-color: black;
     display: flex;
 
     max-width: 100%;
 }
 
-main > header > h1{
+main#topo > header > h1{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.4em;
     text-align: center;
@@ -36,35 +38,35 @@ main > header > h1{
     transition-duration: 1s;
 }
 
-main > nav#menu{
+main#topo > nav#menu{
     background-color: black;
     transition-duration: 1s;
 }
 
 @media(min-width: 1000px){
-    main > header > h1{
+    main#topo > header > h1{
         transition-duration: 1s;
         width: 300px;
     }
-    main > nav{
+    main#topo > nav{
         transition-duration: 1s;
         padding-left: 200px;
     }
 }
 
 @media(min-width: 1170px){
-    main > nav{
+    main#topo > nav{
         transition-duration: 1s;
         padding-left: 400px;
     }
 }
 
 @media(min-width: 1366px){
-    main > header > h1{
+    main#topo > header > h1{
         transition-duration: 1s;
         width: 390px;
     }
-    main > nav{
+    main#topo > nav{
         transition-duration: 1s;
         padding-left: 560px;
     }
@@ -188,11 +190,11 @@ div#menu-icon a{
         padding-top: 5px;
     }
 
-    main > header{
+    main#topo > header{
         grid-area: titulo;
     }
 
-    main{
+    main#topo{
         display: grid;
         grid-template-areas: 
         "icon-menu titulo"
@@ -203,6 +205,7 @@ div#menu-icon a{
 /*--------------------------------Alfabeto      */
 
 main#conteudo{
+    background-color: black;
     padding-top: 10px;
     max-width: 1200px;
     margin: auto;
@@ -260,6 +263,12 @@ div#alfabeto-caixa li.caixa-letra:hover > a{
 }
 
 /*------------------------------Conteúdo      */
+
+main#conteudo-animes{
+    background-color: black;
+    max-width: 1200px;
+    margin: auto;
+}
 
 aside{
     max-width: 1200px;
@@ -375,10 +384,21 @@ aside > .topico-conteudo{
 .img-capa > a > img{
 
     width: auto;
-    height: 40vi;
+    height: 36vi;
     max-height: 226px;
 
     border-radius: 7px;
+    transition-duration: 0.3s;
+}
+
+@media(max-width: 462px){
+    .img-capa > a > img{
+        height: 43.5vi;
+    }
+}
+
+.img-capa > a > img:hover{
+    filter: brightness(50%);
 }
 
 .img-capa > a > .nome{
@@ -387,7 +407,7 @@ aside > .topico-conteudo{
     padding: 2px;
     font-family: "Roboto", sans-serif;
     font-weight: normal;
-    font-size: clamp(0.9em, 1em + 1vw, 1.2em);
+    font-size: clamp(0.9em, 1em + 1vw, 1.1em);
     text-align: center;
 
     white-space: nowrap;
@@ -409,7 +429,7 @@ aside > .topico-conteudo{
     grid-area: ep, ep1, ep3;
 }
 
-@media(max-width: 450px){
+@media(max-width: 485px){
     .animes-eps{
         display: grid;
         grid-template-columns: 50% 50%;
@@ -434,14 +454,29 @@ aside > .topico-conteudo{
     width: 100%;
 }
 
+.animes-eps > .eps img:hover{
+    filter: brightness(50%);
+}
+
 .animes-eps > .eps .nome-ep{
-    padding: 6px;
+    padding: 2px;
     font-family: "Roboto", sans-serif;
     font-weight: normal;
-    font-size: clamp(0.9em, 1em + 1vw, 1.2em);
+    font-size: clamp(0.9em, 0.7em + 0.9vw, 1.2em);
     text-align: center;
 
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+/*------------------------Populares, Anos*/
+
+section > div > h2{
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    font-size: clamp(1em, 1em + 1.5vw, 2em);
+
+    padding: 10px;
 }

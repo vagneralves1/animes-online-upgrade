@@ -313,7 +313,9 @@ aside > .topico-conteudo{
 /*-------------------------------------Capas dos Animes*/
 
 .animes-caixa{
+    background-color: rgb(8, 8, 8);
     overflow-x: auto;
+
     margin-left: 2%;
     margin-right: 2%;
 }
@@ -329,18 +331,117 @@ aside > .topico-conteudo{
 }
 
 .animes-caixa > .animes-capa{
-    background-color: rgb(8, 8, 8);
     display: flex;
+
+    transition-duration: 10s;
+}
+
+
+.animes-caixa > .animes-capa:active{
+    transform: translateX(-151%);
+    transition-delay: 0.2s;
+    transition-duration: 10s;
+}
+
+@media(min-width: 700px){
+    .animes-caixa > .animes-capa:active{
+        transform: translateX( -120%);
+        transition-delay: 0.2s;
+        transition-duration: 10s;
+    }
+}
+
+@media(min-width: 900px){
+    .animes-caixa > .animes-capa:active{
+        transform: translateX( -36%);
+        transition-delay: 0.2s;
+        transition-duration: 10s;
+    }
 }
 
 .animes-capa > .img-capa{
     padding: 0 3px 0 4px;
 }
 
+.img-capa > a{
+    text-decoration: none;
+    color: white;
+}
+
+.img-capa > a:hover{
+    color: rgb(216, 34, 34);
+}
+
 .img-capa > a > img{
+
     width: auto;
-    height: 34vi;
+    height: 40vi;
     max-height: 226px;
 
     border-radius: 7px;
+}
+
+.img-capa > a > .nome{
+    margin: auto;
+    width: 106px;
+    padding: 2px;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    font-size: clamp(0.9em, 1em + 1vw, 1.2em);
+    text-align: center;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.animes-eps{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-areas: 
+    "ep ep1 ep3"
+    ;
+}
+
+.animes-eps > .eps{
+    max-width: 300px;
+    padding: 5px;
+    grid-area: ep, ep1, ep3;
+}
+
+@media(max-width: 450px){
+    .animes-eps{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        "ep ep1"
+        ;
+    }
+}
+
+.animes-eps > .eps > a{
+    text-decoration: none;
+    color: white;
+}
+
+.animes-eps > .eps > a:hover{
+    color: rgb(209, 12, 12);
+}
+
+.animes-eps > .eps img{
+    border-radius: 10px;
+    padding: 3px;
+    width: 100%;
+}
+
+.animes-eps > .eps .nome-ep{
+    padding: 6px;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    font-size: clamp(0.9em, 1em + 1vw, 1.2em);
+    text-align: center;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }

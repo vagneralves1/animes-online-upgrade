@@ -122,6 +122,7 @@ div#menu-aberto li#lista-a:hover > ul{
 div#menu-icon{
     display: none;
     position: absolute;
+    z-index: 10;
     width: 100%;
 }
 
@@ -381,8 +382,30 @@ aside > .topico-conteudo{
     color: rgb(216, 34, 34);
 }
 
-.img-capa > a > img{
+.img-capa div.nota{
+    position: relative;
+}
 
+.img-capa div.nota  > p{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: clamp(0.8em, 0.7em + 1vw, 1em);
+    color: rgb(255, 225, 0);
+    cursor: auto;
+
+    width: 43%;
+    height: 20px;
+    padding: 2px;
+    text-align: center;
+    right: 0;
+    bottom: 2px;
+}
+
+.img-capa div.nota > p > span{
+    color: white;
+}
+
+.img-capa > a  img{
     width: auto;
     height: 36vi;
     max-height: 226px;
@@ -392,12 +415,12 @@ aside > .topico-conteudo{
 }
 
 @media(max-width: 462px){
-    .img-capa > a > img{
+    .img-capa > a img{
         height: 43.5vi;
     }
 }
 
-.img-capa > a > img:hover{
+.img-capa > a  img:hover{
     filter: brightness(50%);
 }
 
@@ -448,6 +471,10 @@ aside > .topico-conteudo{
     color: rgb(209, 12, 12);
 }
 
+.animes-eps > .eps div.img-epç{
+    position: relative;
+}
+
 .animes-eps > .eps img{
     border-radius: 10px;
     padding: 3px;
@@ -456,6 +483,21 @@ aside > .topico-conteudo{
 
 .animes-eps > .eps img:hover{
     filter: brightness(50%);
+}
+
+.animes-eps > .eps p{
+    position: absolute;
+    background-color: red;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(0.6em, 0.8em + 0.5vw, 1em);
+    max-width: 100px;
+    padding: 2px;
+    text-align: center;
+    right: -3px;
+    bottom: 7px;
+
+    border-radius: 0 0 5px 0;
 }
 
 .animes-eps > .eps .nome-ep{
@@ -472,11 +514,42 @@ aside > .topico-conteudo{
 
 /*------------------------Populares, Anos*/
 
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
 section > div > h2{
     color: white;
     font-family: "Montserrat", sans-serif;
     font-weight: normal;
-    font-size: clamp(1em, 1em + 1.5vw, 2em);
+    font-size: clamp(1em, 1em + 1.5vw, 1.5em);
 
     padding: 10px;
+}
+
+div#animes-populares{
+    font-family: "Josefin Sans", sans-serif;
+}
+
+div.popular-bloco{
+    background-color: rgb(29, 27, 27);
+}
+
+div.popular-bloco > a{
+    text-decoration: none;
+    display: flex;
+    position: relative;
+}
+
+div.popular-bloco > a > h3{
+    position: absolute;
+    color: white;
+    font-weight: normal;
+
+    padding: 10px;
+    left: 190px;
+    top: 12px;
+}
+
+div.popular-bloco > a > .top-ano{
+    position: absolute;
+    color: rgb(146, 145, 145);
 }

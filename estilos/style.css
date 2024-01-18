@@ -19,6 +19,8 @@ main#topo{
     display: flex;
 
     max-width: 100%;
+    border-bottom: 2px solid rgb(43, 43, 43);
+    margin: auto;
 }
 
 main#topo > header > h1{
@@ -32,6 +34,7 @@ main#topo > header > h1{
     width: 170px;
     height: 50px;
     line-height: 55px;
+    padding-bottom: 5px;
     margin: auto;
     text-align: right;
 
@@ -143,7 +146,7 @@ div#menu-icon img#icon{
 }
 
 div#menu-icon > div > ul{
-    background-color: black;
+    background-color: rgb(8, 8, 8);
     
     display: none;
 }
@@ -155,6 +158,10 @@ div#menu-icon li{
     font-size: 0.9em;
 
     transition-duration: 0.3s;
+}
+
+div#menu-icon > div > ul > li{
+    border-bottom: 2px solid rgb(30, 30, 30);
 }
 
 div#menu-icon li:hover > a{
@@ -270,14 +277,35 @@ div#alfabeto-caixa li.caixa-letra:hover > a{
 main#conteudo-animes{
     background-color: black;
     max-width: 1200px;
+    padding-bottom: 10px;
     margin: auto;
+}
+
+@media(min-width: 700px){
+    main#conteudo-animes{
+        display: grid;
+        grid-template-areas: 
+        "anime popular"
+        ;
+    }
+    main#conteudo-animes > aside{
+        max-width: 800px;
+    }
+    main#conteudo-animes > section{
+        max-width: 400px;
+    }
+    section div.bloco-popular{
+        margin: 0;
+        padding: 0;
+    }
 }
 
 aside{
     max-width: 1200px;
-    margin: auto;
+    border-bottom: 3px solid rgb(22, 22, 22);
 
     background-color: black;
+    grid-area: anime;
 }
 
 aside > .topico-conteudo{
@@ -330,6 +358,7 @@ aside > .topico-conteudo{
 
     margin-left: 2%;
     margin-right: 2%;
+    margin-bottom: 20px;
 }
 
 .animes-caixa::-webkit-scrollbar{
@@ -516,7 +545,9 @@ aside > .topico-conteudo{
 
 /*------------------------Populares, Anos*/
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+main#conteudo-animes > section{
+    grid-area: popular;
+}
 
 section > div > h2{
     color: white;
@@ -578,7 +609,7 @@ div.popular-bloco > a > .top-ano{
 
 div.popular-bloco > a > .top-nota{
     position: absolute;
-    color: yellow;
+    color: rgb(255, 208, 0);
     font-size: clamp(0.7em, 0.8em + 0.6vw, 1em);
 
     left: 110px;
@@ -597,7 +628,7 @@ div.popular-bloco:hover .top-nota > i{
 
 /*------------------Ano*/
 div#anos{
-    font-family: "Josefin Sans", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 40px;
 }
 
@@ -632,4 +663,28 @@ div#anos li:hover{
 div#anos li > a{
     text-decoration: none;
     color: white;
+}
+
+footer{
+    background-color: black; 
+    transition-duration: 1s;
+}
+
+footer > p{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em, 1.1em + 1.1vw, 1.5em;
+    text-align: center;
+
+    padding: 10px;
+}
+
+footer > p.aroba{
+    text-align: center;
+}
+
+@media(min-width: 1300px){
+    footer{
+        margin-top: 30px;
+    }
 }

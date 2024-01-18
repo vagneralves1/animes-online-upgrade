@@ -11,7 +11,6 @@
 
 body{
     background-color: #1b1b1c;
-    overflow-x: hidden;
 }
 
 main#topo{
@@ -281,30 +280,22 @@ main#conteudo-animes{
     margin: auto;
 }
 
-@media(min-width: 700px){
+@media(min-width: 785px){
     main#conteudo-animes{
+        position: relative;
         display: grid;
+        grid-template-columns: 65% 35%;
         grid-template-areas: 
         "anime popular"
         ;
     }
-    main#conteudo-animes > aside{
-        max-width: 800px;
-    }
     main#conteudo-animes > section{
-        max-width: 400px;
-    }
-    section div.bloco-popular{
-        margin: 0;
-        padding: 0;
+        border-left: 2px solid rgb(28, 28, 28);
     }
 }
 
 aside{
-    max-width: 1200px;
-    border-bottom: 3px solid rgb(22, 22, 22);
-
-    background-color: black;
+    border-bottom: 2px solid rgb(22, 22, 22);
     grid-area: anime;
 }
 
@@ -438,8 +429,8 @@ aside > .topico-conteudo{
 
 .img-capa > a  img{
     width: auto;
-    height: 36vi;
-    max-height: 226px;
+    height: 36vh;
+    max-height: 203px;
 
     border-radius: 7px;
     transition-duration: 0.3s;
@@ -475,6 +466,11 @@ aside > .topico-conteudo{
     grid-template-areas: 
     "ep ep1 ep3"
     ;
+}
+
+div.linha{
+    border-top: 1px solid rgb(41, 41, 41);
+    padding-bottom: 5px;
 }
 
 .animes-eps > .eps{
@@ -594,7 +590,7 @@ div.popular-bloco > a > h3{
     font-weight: normal;
     font-size: clamp(1em, 0.9em + 0.6vw, 1em);
     
-    left: 110px;
+    left: 95px;
     top: 10px;
 }
 
@@ -603,7 +599,7 @@ div.popular-bloco > a > .top-ano{
     color: rgb(183, 181, 181);
     font-size: clamp(0.9em, 0.7em + 0.5vw, 1em);
 
-    left: 110px;
+    left: 95px;
     top: 33px;
 }
 
@@ -612,7 +608,7 @@ div.popular-bloco > a > .top-nota{
     color: rgb(255, 208, 0);
     font-size: clamp(0.7em, 0.8em + 0.6vw, 1em);
 
-    left: 110px;
+    left: 95px;
     top: 85px;
 
     transition-duration: 0.5s;
@@ -628,13 +624,14 @@ div.popular-bloco:hover .top-nota > i{
 
 /*------------------Ano*/
 div#anos{
+    display: block;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 40px;
+    margin: 20px;
 }
 
 div#anos > h2{
     color: white;
-    font-size: clamp(1em, 1em + 1.5vw, 1.5em);
+    font-size: clamp(1em, 0.9em + 0.5vw, 1.5em);
 }
 
 div#anos > ul{

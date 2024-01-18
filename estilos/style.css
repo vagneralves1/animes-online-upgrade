@@ -138,6 +138,8 @@ div#menu-icon img#icon{
     background-color: rgb(4, 4, 4);
 
     cursor: pointer;
+
+    transition-duration: 1s;
 }
 
 div#menu-icon > div > ul{
@@ -530,26 +532,104 @@ div#animes-populares{
 }
 
 div.popular-bloco{
-    background-color: rgb(29, 27, 27);
+    position: relative;
+    background-color: rgb(15, 15, 15);
+    margin: 14px;
+    margin-left: 20px;
 }
 
 div.popular-bloco > a{
     text-decoration: none;
     display: flex;
-    position: relative;
+    overflow: hidden;
+
+    width: 80px;
+    height: 105px;
+}
+
+div.popular-bloco > a > img{
+    width: 100%; 
+
+    transition: 0.9s all ease-in-out;
+}
+
+div.popular-bloco:hover > a > img{
+    transform: scale(1.2);
 }
 
 div.popular-bloco > a > h3{
     position: absolute;
     color: white;
     font-weight: normal;
-
-    padding: 10px;
-    left: 190px;
-    top: 12px;
+    font-size: clamp(1em, 0.9em + 0.6vw, 1em);
+    
+    left: 110px;
+    top: 10px;
 }
 
 div.popular-bloco > a > .top-ano{
     position: absolute;
-    color: rgb(146, 145, 145);
+    color: rgb(183, 181, 181);
+    font-size: clamp(0.9em, 0.7em + 0.5vw, 1em);
+
+    left: 110px;
+    top: 33px;
+}
+
+div.popular-bloco > a > .top-nota{
+    position: absolute;
+    color: yellow;
+    font-size: clamp(0.7em, 0.8em + 0.6vw, 1em);
+
+    left: 110px;
+    top: 85px;
+
+    transition-duration: 0.5s;
+}
+
+div.popular-bloco  .top-nota > span{
+    color: rgb(183, 181, 181);
+}
+
+div.popular-bloco:hover .top-nota > i{
+    color: rgb(217, 10, 10);
+}
+
+/*------------------Ano*/
+div#anos{
+    font-family: "Josefin Sans", sans-serif;
+    margin: 40px;
+}
+
+div#anos > h2{
+    color: white;
+    font-size: clamp(1em, 1em + 1.5vw, 1.5em);
+}
+
+div#anos > ul{
+    list-style-type: none;
+    display: grid;
+    grid-template-areas: 
+    "ano ano1 ano2"
+    ;
+    gap: 8px;
+}
+
+div#anos li{
+    background-color: rgb(13, 13, 13);
+    font-size: 0.9em;
+    text-align: center;
+    padding: 7px;
+    grid-area: ano, ano1, ano2;
+
+    transition-duration: 0.7s;
+}
+
+div#anos li:hover{
+    background-color: rgb(204, 15, 15);
+}
+
+div#anos li > a{
+    text-decoration: none;
+    color: white;
 }

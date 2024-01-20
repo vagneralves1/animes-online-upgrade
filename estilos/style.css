@@ -411,16 +411,18 @@ aside > .topico-conteudo{
 .img-capa div.nota  > p{
     position: absolute;
     background-color: rgba(0, 0, 0, 0.6);
-    font-size: clamp(0.8em, 0.7em + 1vw, 1em);
+    font-size: clamp(0.8em, 0.9em + 1vw, 1em);
     color: rgb(255, 225, 0);
     cursor: auto;
 
     width: 43%;
-    height: 20px;
+    height: 16px;
     padding: 2px;
     text-align: center;
     right: 0;
-    bottom: 2px;
+    bottom: 4px;
+
+    border-radius: 0 0 5px 0;
 }
 
 .img-capa div.nota > p > span{
@@ -440,6 +442,19 @@ aside > .topico-conteudo{
     .img-capa > a img{
         height: 45.3vi;
         padding: 2px;
+    }
+    .img-capa > a > .nome{
+        font-size: clamp(0.8em, 0.8em + 0.7vw, 1em);
+    }
+    .img-capa div.nota  > p{
+        font-size: clamp(0.8em, 0.6em + 1vw, 1em);
+
+        width: 43%;
+        height: 16px;
+        padding: 2px;
+        text-align: center;
+        right: 2px;
+        bottom: 6px;
     }
 }
 

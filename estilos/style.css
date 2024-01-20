@@ -438,7 +438,8 @@ aside > .topico-conteudo{
 
 @media(max-width: 462px){
     .img-capa > a img{
-        height: 45vi;
+        height: 45.3vi;
+        padding: 2px;
     }
 }
 
@@ -462,7 +463,7 @@ aside > .topico-conteudo{
 
 .animes-eps{
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 32.5% 32.5% 32.5%;
     grid-template-areas: 
     "ep ep1 ep3"
     ;
@@ -482,10 +483,11 @@ div.linha{
 @media(max-width: 485px){
     .animes-eps{
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 49% 49%;
         grid-template-areas: 
         "ep ep1"
         ;
+        gap: 4px;
     }
 }
 

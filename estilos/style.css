@@ -103,9 +103,14 @@ div#menu-aberto .topico{
     cursor: pointer;
 }
 
-div#menu-aberto .topico:hover{
-    background-color: rgb(35, 35, 35);
-    color: rgb(238, 238, 238);
+div#menu-aberto .borda:hover{
+    border-bottom: 3px solid rgb(222, 222,222);
+    color: rgb(146, 146, 146);
+}
+
+div#menu-aberto .interno-list:hover{
+    background-color: rgb(27, 27, 27);
+    color: rgb(214, 214, 214);
 }
 
 div#menu-aberto li#lista-a{
